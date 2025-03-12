@@ -42,3 +42,10 @@ let people: {
     name: string;
     age: number;
 }[];
+
+// Type Inference 
+
+let course = "React Course"
+// course = 1234;
+// why are we getting this error, since we didnt assign any type here
+// ans- typecript by default tries to infer as many type as possible
