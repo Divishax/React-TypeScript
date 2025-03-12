@@ -80,3 +80,17 @@ function addNew (a:number,b:number):number {
 function printOutput(value:any){ // void
     console.log(value);
 }
+
+
+
+// Generics
+
+function insertAtBeginning<T>(array: T[], value: T){
+    const newArray = [value, ...array]
+    return newArray;
+}
+
+const demoArray = [1,2,3];
+
+const updatedArray = insertAtBeginning(demoArray,-1); // [-1,1,2,3]
+// here updatedArray is 'any' => TS dont know 
